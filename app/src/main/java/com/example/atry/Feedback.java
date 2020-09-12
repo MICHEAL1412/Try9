@@ -7,23 +7,46 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class Feedback  extends AppCompatActivity {
-    private EditText editTextTextMultiLine;
+    private EditText txtName,txtPhone,txtComment;
     private Button button;
+    DatabaseReference reff;
+    Comment comment;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
         Intent intent = getIntent();
 
-        editTextTextMultiLine=findViewById(R.id.editTextTextMultiLine);
-        button=findViewById(R.id.button);
+        txtName=findViewById(R.id.txtName);
+        txtPhone=findViewById(R.id.txtPhone);
+        txtComment=findViewById(R.id.txtComment);
 
-        editTextTextMultiLine.addTextChangedListener(loginTextWatcher);
+        button=findViewById(R.id.button);
+        comment= new Comment();
+        reff= FirebaseDatabase.getInstance().getReference().child.("Comment");
+        txtName.addTextChangedListener(loginTextWatcher);
+        txtPhone.addTextChangedListener(loginTextWatcher);
+        txtComment.addTextChangedListener(loginTextWatcher);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                int Phone=Integer.parseInt(txtPhone.getText().toString().trim());
+                comment.setName(txtName.getText().toString().trim());
+                comment.setComment(txtComment.getText().toString().trim());
+                reff.child("CustComment").setValue(comment);
+
+            }
+        });
 
     }
     private TextWatcher loginTextWatcher=new TextWatcher() {
@@ -34,7 +57,8 @@ public class Feedback  extends AppCompatActivity {
 
         @Override
         public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            String feedbackInput=editTextTextMultiLine.getText().toString().trim();
+            String feedbackInput=txtName.getText().toString().trim();
+
 
             button.setEnabled(!feedbackInput.isEmpty());
         }
@@ -56,7 +80,11 @@ public class Feedback  extends AppCompatActivity {
         Toast toast=Toast.makeText(this,R.string.toast_message,Toast.LENGTH_SHORT);
         toast.show();
         EditText name;
-        name=findViewById(R.id.editTextTextMultiLine);
+        name=findViewById(R.id.txtName);
+        name.setText("");
+        name=findViewById(R.id.txtPhone);
+        name.setText("");
+        name=findViewById(R.id.txtComment);
         name.setText("");
     }
 

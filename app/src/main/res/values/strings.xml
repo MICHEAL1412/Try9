@@ -92,4 +92,9 @@
     <string name="antebellum">Antebellum</string>
     <string name="mulan">Mulan 2020</string>
     <string name="tenet">Tenet</string>
+    <string name="name">Name:</string>
+    <string name="enterName">Please enter user name</string>
+    <string name="phone">Please enter your phone number</string>
+    <string name="Phone">Phone:</string>
+    <string name="comment">Comment:</string>
 </resources>

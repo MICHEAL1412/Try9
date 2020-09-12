@@ -5,28 +5,31 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0E0A0A"
     tools:context=".Home">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="@color/colorPrimary"
-                android:id="@+id/toolbar"
+                android:elevation="4dp"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                android:elevation="4dp"/>
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
             <FrameLayout
+                android:id="@+id/fragment_container"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/fragment_container">
+                android:layout_height="match_parent">
 
                 <androidx.viewpager2.widget.ViewPager2
                     android:id="@+id/viewPagerImageSlider"
@@ -35,7 +38,6 @@
             </FrameLayout>
 
         </LinearLayout>
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -55,6 +57,7 @@
             android:layout_marginBottom="250dp"
             android:onClick="Pop"
             android:text="@string/Popular"
+            android:textColor="#F3ECEC"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/now_showing"
@@ -70,6 +73,7 @@
             android:layout_marginRight="20dp"
             android:onClick="Now"
             android:text="@string/Now_showing"
+            android:textColor="#F3ECEC"
             android:textSize="20sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/Popular"
             app:layout_constraintEnd_toStartOf="@+id/Popular"
@@ -85,6 +89,7 @@
             android:layout_marginRight="18dp"
             android:onClick="coming"
             android:text="@string/Coming_soon"
+            android:textColor="#F3ECEC"
             android:textSize="20sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/Popular"
             app:layout_constraintEnd_toEndOf="parent"
@@ -121,6 +126,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/blooda"
+                    android:textColor="#F6F0F0"
                     android:textSize="20sp" />
 
             </LinearLayout>
@@ -143,6 +149,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/fant"
+                    android:textColor="#F6F2F2"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -163,6 +170,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/onward"
+                    android:textColor="#F6EFEF"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -202,6 +210,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/baby"
+                    android:textColor="#F1E7E7"
                     android:textSize="20sp" />
 
             </LinearLayout>
@@ -223,6 +232,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/digimon"
+                    android:textColor="#F8F4F4"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -243,6 +253,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/hitman"
+                    android:textColor="#FBF6F6"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -278,6 +289,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/antebellum"
+                    android:textColor="#FAF6F6"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -299,6 +311,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/mulan"
+                    android:textColor="#F4EFEF"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -320,6 +333,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/tenet"
+                    android:textColor="#F4ECEC"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -327,6 +341,7 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
@@ -338,3 +353,12 @@
         app:menu="@menu/drawer_menu" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+
+
+
+
+

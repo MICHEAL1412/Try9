@@ -38,14 +38,14 @@ public class Policy extends AppCompatActivity implements NavigationView.OnNaviga
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-
+        policytitle = (TextView)findViewById(R.id.policyDetails);
         mDataBase = FirebaseDatabase.getInstance().getReference().child("Policy");
         mDataBase.child("PolicyTitle").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                String MovieName1 = dataSnapshot.child("Policy").getValue().toString();
-                policytitle.setText(MovieName1);
+                String PolicyTitle = dataSnapshot.getValue().toString();
+                policytitle.setText(PolicyTitle);
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
