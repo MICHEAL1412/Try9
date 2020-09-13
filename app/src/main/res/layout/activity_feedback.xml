@@ -28,14 +28,14 @@
         android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimary"
-            android:id="@+id/toolbar"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:background="@android:color/black"
             android:elevation="4dp"
-            app:navigationIcon="@drawable/navigation_icon"/>
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:navigationIcon="@drawable/navigation_icon"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -116,7 +116,6 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="@string/enterName"
                     android:textColor="@android:color/background_light"
                     android:textColorHint="@android:color/background_light" />
             </LinearLayout>
@@ -140,7 +139,6 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="@string/phone"
                     android:textColor="@android:color/background_light" />
 
             </LinearLayout>

@@ -3,7 +3,7 @@ package com.example.atry;
 public class Comment {
     private static String Name;
     private String Comment;
-    private  Integer Phone;
+    private String Phone;
 
     public Comment() {
     }
@@ -24,11 +24,11 @@ public class Comment {
         Comment = comment;
     }
 
-    public Integer getPhone() {
+    public String getPhone() {
         return Phone;
     }
 
-    public void setPhone(Integer phone) {
+    public void setPhone(String phone) {
         Phone = phone;
     }
 }

@@ -66,8 +66,8 @@
 
         <Button
             android:id="@+id/btn_food_beverage"
-            android:layout_width="192dp"
-            android:layout_height="35dp"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
             android:onClick="FB"
             android:text="@string/food_beverage"
             app:layout_constraintBottom_toTopOf="@+id/btn_feedback"
@@ -77,8 +77,8 @@
 
         <Button
             android:id="@+id/btn_rating"
-            android:layout_width="197dp"
-            android:layout_height="31dp"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
             android:onClick="Rating"
             android:text="@string/rating"
             app:layout_constraintBottom_toTopOf="@+id/btn_general"
@@ -88,8 +88,8 @@
 
         <Button
             android:id="@+id/btn_general"
-            android:layout_width="205dp"
-            android:layout_height="35dp"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
             android:onClick="general"
             android:text="@string/general"
             app:layout_constraintBottom_toTopOf="@+id/btn_food_beverage"
@@ -99,8 +99,8 @@
 
         <Button
             android:id="@+id/btn_feedback"
-            android:layout_width="212dp"
-            android:layout_height="41dp"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
             android:onClick="feedback"
             android:text="@string/feedback"
             app:layout_constraintBottom_toBottomOf="parent"
